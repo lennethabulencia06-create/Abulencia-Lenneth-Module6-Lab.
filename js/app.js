@@ -1,7 +1,3 @@
-/**
- * Pure Validation Function: Student Number
- * Format: 24-1234-123 (two digits, hyphen, four digits, hyphen, three digits)
- */
 function isValidStudentNumber(value) {
   if (typeof value !== 'string') return false;
   const trimmed = value.trim();
@@ -9,10 +5,6 @@ function isValidStudentNumber(value) {
   return studentNumRegex.test(trimmed);
 }
 
-/**
- * Pure Validation Function: Password
- * Rules: At least 8 characters, >=1 uppercase, >=1 digit, >=1 special character (@, $, !), no whitespace
- */
 function isValidPassword(value) {
   if (typeof value !== 'string') return false;
   // Check no whitespace
@@ -29,7 +21,6 @@ function isValidPassword(value) {
   return true;
 }
 
-// Export pure functions for Node.js / CommonJS Autograder environments
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
     isValidStudentNumber,
